@@ -11,13 +11,21 @@ config_version=5
 [application]
 
 config/name="GAME"
-run/main_scene="uid://d04hx0p84infv"
+run/main_scene="uid://tgx8h3q75k41"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://GameManager.gd"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/TileMapDual/plugin.cfg", "res://addons/gaea/plugin.cfg")
+
+[global_group]
+
+player=""
 
 [input]
 
