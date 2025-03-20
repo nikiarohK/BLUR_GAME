@@ -13,6 +13,7 @@ properties/0/replication_mode = 1
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 top_level = true
 script = ExtResource("1_duj78")
+dash_duration = 0.1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15625, 0.15625)

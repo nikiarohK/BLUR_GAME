@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://do5wwvylqq3l7"]
+[gd_scene load_steps=8 format=3 uid="uid://do5wwvylqq3l7"]
 
 [ext_resource type="Script" uid="uid://bj8wiucituqoa" path="res://prj1.gd" id="1_alrdm"]
-[ext_resource type="Texture2D" uid="uid://k05qjc2014o3" path="res://assets/test assets/pngimg.com - circle_PNG4.png" id="2_8qwsn"]
+[ext_resource type="Texture2D" uid="uid://brcjyhhvcg0k4" path="res://assets/test assets/poisonTest.png" id="2_alrdm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t68p8"]
 
@@ -10,16 +10,89 @@ properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
+[sub_resource type="Animation" id="Animation_8qwsn"]
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 4.76837e-07), Vector2(0, 4.76837e-07)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-6.26502, -0.00363743]
+}
+
+[sub_resource type="Animation" id="Animation_alrdm"]
+resource_name = "flip"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 4.76837e-07)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.00363743, 3.13645, 6.25042]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t68p8"]
+_data = {
+&"RESET": SubResource("Animation_8qwsn"),
+&"flip": SubResource("Animation_alrdm")
+}
+
 [node name="Area2D" type="Area2D"]
+scale = Vector2(0.6, 0.6)
 script = ExtResource("1_alrdm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.87, 0.87)
 shape = SubResource("CircleShape2D_t68p8")
 disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.003, 0.003)
-texture = ExtResource("2_8qwsn")
+position = Vector2(0, 4.76837e-07)
+rotation = -6.26502
+scale = Vector2(1.79733, 1.79733)
+texture = ExtResource("2_alrdm")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_alrdm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t68p8")
+}
+autoplay = "flip"

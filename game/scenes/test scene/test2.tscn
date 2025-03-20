@@ -676,6 +676,9 @@ position = Vector2(351, 383)
 [node name="1" type="Node2D" parent="SpawnPoints" groups=["PlayerSpawn"]]
 position = Vector2(478, 390)
 
+[node name="2" type="Node2D" parent="SpawnPoints" groups=["PlayerSpawn"]]
+position = Vector2(402, 470)
+
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 spawn_path = NodePath("..")
 
