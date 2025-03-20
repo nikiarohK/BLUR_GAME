@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd55pskry1pvb"
-path="res://.godot/imported/darkgrassstone1_1.png-259ba683e97b864055203e5eb4837292.ctex"
+uid="uid://u0m1cwbgqug6"
+path="res://.godot/imported/stone-grasstest.png-888de71d26d949524b7a5f76550c842f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test soil/darkgrassstone1_1.png"
-dest_files=["res://.godot/imported/darkgrassstone1_1.png-259ba683e97b864055203e5eb4837292.ctex"]
+source_file="res://assets/test assets/test soil/stone-grasstest.png"
+dest_files=["res://.godot/imported/stone-grasstest.png-888de71d26d949524b7a5f76550c842f.ctex"]
 
 [params]
 

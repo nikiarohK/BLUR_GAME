@@ -1,8 +1,23 @@
 extends CharacterBody2D
 var direction: Vector2 = Vector2()
-const speed = 300.0
+@export var speed = 100.0
+@export var range = 200.0
+@export var dash_speed: float = 600.0  # Скорость рывка
+@export var dash_duration: float = 0.2  # Длительность рывка
+@export var dash_cooldown: float = 1.0  # Кулдаун рывка
+@export var reload_time: float = 0.5  # Время перезарядки
+
+var can_shoot: bool = true  # Может ли персонаж стрелять
+var is_dashing: bool = false
+var can_dash: bool = true
+var dash_direction: Vector2 = Vector2.ZERO
+
+@onready var reload_timer: Timer = $prjct_rel
+
 
 func _ready():
+	reload_timer.wait_time = reload_time
+	
 	$MultiplayerSynchronizer.set_multiplayer_authority(str(name).to_int())
 	if multiplayer.get_unique_id() == $MultiplayerSynchronizer.get_multiplayer_authority():
 		$Camera2D.make_current()
@@ -27,8 +42,80 @@ func read_input():
 	if Input.is_action_pressed('up'):
 		velocity.y -= 1
 		direction = Vector2(0,-1)
-	velocity = velocity.normalized() * speed
+	if Input.is_action_just_pressed('dash') and can_dash and direction != Vector2.ZERO:
+		start_dash(direction)
+	if is_dashing:
+		velocity = dash_direction * dash_speed
+	else:
+		velocity = velocity.normalized() * speed
+	
+	
+	
+	
+	if Input.is_action_pressed('shoot'):
+		var max_range = range
+		var mouse_position = get_global_mouse_position()
+		var player_position = global_position
+		var direction = (mouse_position - global_position).normalized()
+		var distance = player_position.distance_to(mouse_position)
+		if distance <= max_range:
+			shoot.rpc(direction, distance)
+		else:
+			shoot.rpc(direction, max_range)
+	
+	
+	
+@rpc("any_peer", "call_local")
+func shoot(direction: Vector2, distance: float) -> void:
+	if not can_shoot:
+		return
+	if multiplayer.is_server():
+		spawn_bullet.rpc(direction, distance, global_position)
+
+	start_reload()
+@rpc("any_peer", "call_local")
+func spawn_bullet(direction: Vector2, distance: float, position: Vector2) -> void:
+	var bullet = preload("res://scenes/test scene/projectile1.tscn").instantiate()
+	bullet.direction = direction.normalized()  # Устанавливаем направление
+	bullet.max_distance = distance  # Устанавливаем дальность
+	bullet.position = global_position  # Позиция выстрела (например, позиция игрока)
+	get_parent().add_child(bullet)  # Добавляем снаряд на сцену
+	
+
+func start_reload() -> void:
+	can_shoot = false
+	reload_timer.start()
+
 func _physics_process(delta):
 	if $MultiplayerSynchronizer.get_multiplayer_authority() == multiplayer.get_unique_id():
 		read_input()
 	move_and_slide()
+
+
+func _on_prjct_rel_timeout() -> void:
+	can_shoot = true
+
+func _process(delta: float) -> void:
+	if not can_shoot:
+		update_reload_indicator()
+
+func update_reload_indicator() -> void:
+	var time_left = reload_timer.time_left
+	var progress = 1.0 - (time_left / reload_time)  # Прогресс от 0 до 1
+	
+func start_dash(direction: Vector2):
+	is_dashing = true
+	can_dash = false
+	dash_direction = direction
+	# Запускаем таймер длительности рывка
+	await get_tree().create_timer(dash_duration).timeout
+	end_dash()
+
+	# Запускаем таймер кулдауна
+	await get_tree().create_timer(dash_cooldown).timeout
+	can_dash = true
+
+func end_dash():
+	is_dashing = false
+	velocity = Vector2.ZERO  # Сбрасываем скорость после рывка
+	

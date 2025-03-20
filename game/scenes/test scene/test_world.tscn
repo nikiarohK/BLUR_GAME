@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=4 uid="uid://28i75htoeqpm"]
 
 [ext_resource type="Script" uid="uid://g4eg2eoo8svc" path="res://addons/gaea/generators/2D/noise_generator/noise_generator.gd" id="1_dxrhd"]
-[ext_resource type="Texture2D" uid="uid://1utipe3ttejk" path="res://assets/test soil/grass-watertest.png" id="2_xn242"]
+[ext_resource type="Texture2D" uid="uid://1utipe3ttejk" path="res://assets/test assets/test soil/grass-watertest.png" id="2_xn242"]
 [ext_resource type="Script" uid="uid://c63enaiyykbr1" path="res://addons/gaea/modifiers/2D/modifier_2d.gd" id="3_oxggh"]
 [ext_resource type="Script" uid="uid://bgrmgnilq762s" path="res://addons/gaea/generators/2D/noise_generator/noise_generator_settings.gd" id="4_n3ud6"]
 [ext_resource type="Script" uid="uid://ctxsc7lq57gpw" path="res://addons/gaea/generators/2D/noise_generator/noise_generator_data.gd" id="5_r4yu4"]

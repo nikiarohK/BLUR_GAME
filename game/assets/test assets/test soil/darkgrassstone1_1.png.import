@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7drebjy4hvqp"
-path="res://.godot/imported/darkgrasswater1_1.png-11484598bdb5df2c9b0f6b5c7e1b8b32.ctex"
+uid="uid://bd55pskry1pvb"
+path="res://.godot/imported/darkgrassstone1_1.png-b93824e1223bca21ccc2dbc4156e5d03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test soil/darkgrasswater1_1.png"
-dest_files=["res://.godot/imported/darkgrasswater1_1.png-11484598bdb5df2c9b0f6b5c7e1b8b32.ctex"]
+source_file="res://assets/test assets/test soil/darkgrassstone1_1.png"
+dest_files=["res://.godot/imported/darkgrassstone1_1.png-b93824e1223bca21ccc2dbc4156e5d03.ctex"]
 
 [params]
 

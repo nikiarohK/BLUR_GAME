@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc6ppmf6fdrs8"
-path="res://.godot/imported/grasswater1_1.png-9de04cfcdb4bc346002407e0a495c543.ctex"
+uid="uid://dwhsu150nmtup"
+path="res://.godot/imported/green-circle-icon-28.png-bea9d547a95afc079350625ff8fb9fcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test soil/grasswater1_1.png"
-dest_files=["res://.godot/imported/grasswater1_1.png-9de04cfcdb4bc346002407e0a495c543.ctex"]
+source_file="res://assets/test assets/green-circle-icon-28.png"
+dest_files=["res://.godot/imported/green-circle-icon-28.png-bea9d547a95afc079350625ff8fb9fcd.ctex"]
 
 [params]
 

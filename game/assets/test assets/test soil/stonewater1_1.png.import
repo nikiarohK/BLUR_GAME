@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u0m1cwbgqug6"
-path="res://.godot/imported/stone-grasstest.png-4a7eecfd631381aa1dd9b93a11eeedc6.ctex"
+uid="uid://d1rqnagelrkc"
+path="res://.godot/imported/stonewater1_1.png-f7b77b121e17abfb2e7c5a2d1634256d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test soil/stone-grasstest.png"
-dest_files=["res://.godot/imported/stone-grasstest.png-4a7eecfd631381aa1dd9b93a11eeedc6.ctex"]
+source_file="res://assets/test assets/test soil/stonewater1_1.png"
+dest_files=["res://.godot/imported/stonewater1_1.png-f7b77b121e17abfb2e7c5a2d1634256d.ctex"]
 
 [params]
 

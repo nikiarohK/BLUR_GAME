@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://36yq1gnwniv0"
-path="res://.godot/imported/grassdarkgrass1_1.png-04e66aa18548f9fdf4b976a791ef9fb2.ctex"
+uid="uid://k05qjc2014o3"
+path="res://.godot/imported/pngimg.com - circle_PNG4.png-d52e7e4d8b34ae3d7f3a3ed463a51c01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test soil/grassdarkgrass1_1.png"
-dest_files=["res://.godot/imported/grassdarkgrass1_1.png-04e66aa18548f9fdf4b976a791ef9fb2.ctex"]
+source_file="res://assets/test assets/pngimg.com - circle_PNG4.png"
+dest_files=["res://.godot/imported/pngimg.com - circle_PNG4.png-d52e7e4d8b34ae3d7f3a3ed463a51c01.ctex"]
 
 [params]
 

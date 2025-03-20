@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://do5wwvylqq3l7"]
+
+[ext_resource type="Script" uid="uid://bj8wiucituqoa" path="res://prj1.gd" id="1_alrdm"]
+[ext_resource type="Texture2D" uid="uid://k05qjc2014o3" path="res://assets/test assets/pngimg.com - circle_PNG4.png" id="2_8qwsn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t68p8"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_alrdm"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_alrdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_t68p8")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.003, 0.003)
+texture = ExtResource("2_8qwsn")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_alrdm")

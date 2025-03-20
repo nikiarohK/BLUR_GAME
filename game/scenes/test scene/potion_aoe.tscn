@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://3es5xrv0kkk3"]
+
+[ext_resource type="Texture2D" uid="uid://dwhsu150nmtup" path="res://assets/test assets/green-circle-icon-28.png" id="1_2yau7"]
+[ext_resource type="Script" uid="uid://bdqxdei2n6q4g" path="res://scenes/test scene/potion_aoe.gd" id="1_apmf3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_apmf3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_apmf3")
+
+[node name="potionAOE" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potionAOE"]
+scale = Vector2(3.36, 3.36)
+shape = SubResource("CircleShape2D_apmf3")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="potionAOE"]
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("1_2yau7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1utipe3ttejk"
-path="res://.godot/imported/grass-watertest.png-591dbff5d430e424d0276b3712081b3b.ctex"
+uid="uid://b7drebjy4hvqp"
+path="res://.godot/imported/darkgrasswater1_1.png-c29339b1417c8ae79d448ce4c268c461.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test soil/grass-watertest.png"
-dest_files=["res://.godot/imported/grass-watertest.png-591dbff5d430e424d0276b3712081b3b.ctex"]
+source_file="res://assets/test assets/test soil/darkgrasswater1_1.png"
+dest_files=["res://.godot/imported/darkgrasswater1_1.png-c29339b1417c8ae79d448ce4c268c461.ctex"]
 
 [params]
 

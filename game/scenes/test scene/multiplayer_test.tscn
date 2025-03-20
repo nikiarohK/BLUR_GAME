@@ -8,6 +8,7 @@ anchors_preset = 0
 script = ExtResource("1_6edci")
 
 [node name="host" type="Button" parent="."]
+layout_mode = 0
 offset_left = 51.0
 offset_top = 47.0
 offset_right = 211.0
@@ -15,6 +16,7 @@ offset_bottom = 78.0
 text = "Host"
 
 [node name="join" type="Button" parent="."]
+layout_mode = 0
 offset_left = 245.0
 offset_top = 44.0
 offset_right = 402.0
@@ -23,6 +25,7 @@ text = "join
 "
 
 [node name="Start game" type="Button" parent="."]
+layout_mode = 0
 offset_left = 436.0
 offset_top = 43.0
 offset_right = 636.0
