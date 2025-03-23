@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ow6yp76ws3x"
-path="res://.godot/imported/poisonAOE.png-5811bb75eaaade13508d6290bcad9a76.ctex"
+uid="uid://dgy42unhqu3vd"
+path="res://.godot/imported/fireAOE.png-6c5a537da2c41421d2229af21a001714.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test assets/poisonAOE.png"
-dest_files=["res://.godot/imported/poisonAOE.png-5811bb75eaaade13508d6290bcad9a76.ctex"]
+source_file="res://assets/test assets/testPotion/fireAOE.png"
+dest_files=["res://.godot/imported/fireAOE.png-6c5a537da2c41421d2229af21a001714.ctex"]
 
 [params]
 

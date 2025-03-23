@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgwh1e6k2gnj"]
+
+[ext_resource type="Script" uid="uid://cm45fqlynpj66" path="res://scenes/player/canvas_layer.gd" id="1_y6yk7"]
+[ext_resource type="Texture2D" uid="uid://dgy42unhqu3vd" path="res://assets/test assets/testPotion/fireAOE.png" id="2_j7cgu"]
+[ext_resource type="Texture2D" uid="uid://c6g7hahd8meul" path="res://assets/test assets/testPotion/frostAOE.png" id="3_plhos"]
+[ext_resource type="Texture2D" uid="uid://ow6yp76ws3x" path="res://assets/test assets/testPotion/poisonAOE.png" id="4_830d3"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_y6yk7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control"]
+top_level = true
+offset_left = -27.0
+offset_top = -24.0
+offset_right = 27.0
+offset_bottom = -11.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button1" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 42.0
+scale = Vector2(0.229076, 0.224276)
+icon = ExtResource("2_j7cgu")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 2.0
+offset_right = 52.0
+offset_bottom = 42.0
+scale = Vector2(0.230963, 0.226265)
+icon = ExtResource("3_plhos")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 2.0
+offset_right = 62.0
+offset_bottom = 42.0
+scale = Vector2(0.229519, 0.226652)
+icon = ExtResource("4_830d3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 2.0
+offset_right = 41.0
+offset_bottom = 10.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button5" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 2.0
+offset_right = 51.0
+offset_bottom = 10.0
+metadata/_edit_use_anchors_ = true

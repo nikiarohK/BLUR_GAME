@@ -11,3 +11,16 @@ func _on_Timer_timeout():
 	queue_free()  # Удаляет объект из сцены
 	# Или, если хотите сделать объект невидимым:
 	# visible = false
+
+
+func _on_potion_aoe_area_entered(area: Area2D) -> void:
+	if area.is_in_group('fireAOE'):
+		var aoe = preload("res://scenes/test scene/prjctle/fire/fire_AOE.tscn").instantiate()
+		aoe.position = global_position
+		get_parent().add_child(aoe)
+		queue_free()
+	if area.is_in_group('iceAOE'):
+		var aoe = preload("res://scenes/test scene/prjctle/ice/ice_AOE.tscn").instantiate()
+		aoe.position = global_position
+		get_parent().add_child(aoe)
+		queue_free()

@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=3 uid="uid://3es5xrv0kkk3"]
+
+[ext_resource type="Script" uid="uid://bdqxdei2n6q4g" path="res://scenes/test scene/prjctle/poison/potion_aoe.gd" id="1_apmf3"]
+[ext_resource type="Texture2D" uid="uid://ow6yp76ws3x" path="res://assets/test assets/testPotion/poisonAOE.png" id="2_apmf3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_apmf3"]
+
+[sub_resource type="Animation" id="Animation_cpjwi"]
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("potionAOE/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("potionAOE/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0188704, -4.30502, -5.29813]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("potionAOE/Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.61, 0.61), Vector2(2.05, 2.05)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("potionAOE/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("potionAOE/CollisionShape2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.701723]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("potionAOE/CollisionShape2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.966245, 0.966245), Vector2(3.31308, 3.31308)]
+}
+
+[sub_resource type="Animation" id="Animation_apmf3"]
+resource_name = "splash"
+length = 0.5
+step = 0.0158
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("potionAOE/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("potionAOE/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("potionAOE/Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.37, 0.37), Vector2(2.05, 2.05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gmqyt"]
+_data = {
+&"RESET": SubResource("Animation_cpjwi"),
+&"splash": SubResource("Animation_apmf3")
+}
+
+[node name="potionAOE" type="Node2D" groups=["poisonAOE"]]
+script = ExtResource("1_apmf3")
+duartion = 5.0
+
+[node name="potionAOE" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potionAOE" groups=["poisonAOE"]]
+rotation = 0.701723
+scale = Vector2(0.966245, 0.966245)
+shape = SubResource("CircleShape2D_apmf3")
+
+[node name="Sprite2D" type="Sprite2D" parent="potionAOE"]
+modulate = Color(1, 1, 1, 0.745098)
+rotation = -0.0188704
+scale = Vector2(0.61, 0.61)
+texture = ExtResource("2_apmf3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gmqyt")
+}
+autoplay = "RESET"
+
+[connection signal="area_entered" from="potionAOE" to="." method="_on_potion_aoe_area_entered"]

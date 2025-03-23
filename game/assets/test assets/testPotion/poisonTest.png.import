@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brcjyhhvcg0k4"
-path="res://.godot/imported/poisonTest.png-eb24b27a45bc5daa93a6d0f5feade990.ctex"
+path="res://.godot/imported/poisonTest.png-0de84bdf21f201d9ff2d9130c3b6b9f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test assets/poisonTest.png"
-dest_files=["res://.godot/imported/poisonTest.png-eb24b27a45bc5daa93a6d0f5feade990.ctex"]
+source_file="res://assets/test assets/testPotion/poisonTest.png"
+dest_files=["res://.godot/imported/poisonTest.png-0de84bdf21f201d9ff2d9130c3b6b9f7.ctex"]
 
 [params]
 

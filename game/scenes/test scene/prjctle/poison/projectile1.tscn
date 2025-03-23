@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://do5wwvylqq3l7"]
 
-[ext_resource type="Script" uid="uid://bj8wiucituqoa" path="res://prj1.gd" id="1_alrdm"]
-[ext_resource type="Texture2D" uid="uid://brcjyhhvcg0k4" path="res://assets/test assets/poisonTest.png" id="2_alrdm"]
+[ext_resource type="Script" uid="uid://bj8wiucituqoa" path="res://scenes/test scene/prjctle/poison/prj1.gd" id="1_nkjpa"]
+[ext_resource type="Texture2D" uid="uid://brcjyhhvcg0k4" path="res://assets/test assets/testPotion/poisonTest.png" id="2_nkjpa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t68p8"]
 
@@ -75,7 +75,7 @@ _data = {
 
 [node name="Area2D" type="Area2D"]
 scale = Vector2(0.6, 0.6)
-script = ExtResource("1_alrdm")
+script = ExtResource("1_nkjpa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.87, 0.87)
@@ -86,7 +86,7 @@ disabled = true
 position = Vector2(0, 4.76837e-07)
 rotation = -6.26502
 scale = Vector2(1.79733, 1.79733)
-texture = ExtResource("2_alrdm")
+texture = ExtResource("2_nkjpa")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_alrdm")

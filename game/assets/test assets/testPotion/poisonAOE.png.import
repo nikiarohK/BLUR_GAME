@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwhsu150nmtup"
-path="res://.godot/imported/green-circle-icon-28.png-bea9d547a95afc079350625ff8fb9fcd.ctex"
+uid="uid://ow6yp76ws3x"
+path="res://.godot/imported/poisonAOE.png-f5c7bd3512381d862e9f4d0ef5c095b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test assets/green-circle-icon-28.png"
-dest_files=["res://.godot/imported/green-circle-icon-28.png-bea9d547a95afc079350625ff8fb9fcd.ctex"]
+source_file="res://assets/test assets/testPotion/poisonAOE.png"
+dest_files=["res://.godot/imported/poisonAOE.png-f5c7bd3512381d862e9f4d0ef5c095b9.ctex"]
 
 [params]
 

@@ -8,7 +8,7 @@ var traveled_distance: float = 0  # Пройденное расстояние
 
 @rpc("call_local", "any_peer")
 func destroy() -> void:
-	var aoe = preload("res://scenes/test scene/potion_aoe.tscn").instantiate()
+	var aoe = preload("res://scenes/test scene/prjctle/fire/fire_AOE.tscn").instantiate()
 	aoe.position = global_position
 	get_parent().add_child(aoe)
 	queue_free()

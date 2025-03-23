@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://bpkjfhgf83c6t" path="res://addons/gaea/tile_info/tilemap_tile_info.gd" id="6_2pa71"]
 [ext_resource type="Script" uid="uid://cysxhw0v3t0mk" path="res://addons/gaea/renderers/2D/tilemap_gaea_renderer.gd" id="7_yfkqr"]
 [ext_resource type="Script" uid="uid://thkg3yru0eoa" path="res://addons/TileMapDual/TileMapDual.gd" id="9_agw1e"]
-[ext_resource type="PackedScene" uid="uid://dmbgkctc2vsd1" path="res://assets/test assets/player/character_body_2d.tscn" id="10_xn242"]
+[ext_resource type="PackedScene" uid="uid://dmbgkctc2vsd1" path="res://scenes/player/character_body_2d.tscn" id="10_xn242"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_dxrhd"]
 seed = 167218764
